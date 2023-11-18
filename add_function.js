@@ -1,6 +1,12 @@
-function addition([a, b, c, d, e]) {
-    let total = a + b + c + d + e;
+function addNumbers(numbers) {
+    const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    return sum;
+}
+
+let numbersArray = [3, 4, 9, 12, 5, 10]
+function addition(numbers) {
+    let total = addNumbers(numbersArray);
     return console.log(total);
 }
 
-addition([12, 23, 65, 43, 90]);
+addition(numbersArray);
